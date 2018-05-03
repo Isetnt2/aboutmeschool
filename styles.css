@@ -1,1 +1,28 @@
-
+body{
+background: rgb(238,174,202);
+background: linear-gradient(256deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+#about{
+  display: block;
+  margin-top: 5em;
+  margin-right: auto;
+  margin-left: auto;
+  width: 20rem;
+  height: 25rem;
+  background: #909090;
+  z-index: 9;
+  box-shadow: 5px 5px #606060;
+  border-radius: 4px;
+}
+.prof{
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -24rem;
+  background: #ababab;
+  width: 7em;
+  height: 7em;
+  border-radius: 100px;
+  z-index: 10;
+}
