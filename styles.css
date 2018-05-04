@@ -27,3 +27,14 @@ background: linear-gradient(256deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 
   border-radius: 100px;
   z-index: 10;
 }
+.profpic{
+  display: block;
+  margin-top: -7rem;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 11;
+  position: relative;
+  width: 7em;
+  max-height: 7em;
+  border-radius: 100px;
+}
