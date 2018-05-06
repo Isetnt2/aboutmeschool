@@ -1,47 +1,126 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 body{
-background: rgb(238,174,202);
-background: linear-gradient(256deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    overflow: hidden;
+    background: rgb(238,174,202);
+    background: linear-gradient(256deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
-.about{
-  	position: absolute;
-  display: block;
-  margin-top: -10em;
-  margin-right: auto;
-  margin-left: auto;
-  width: 20rem;
-  height: 25rem;
-  background: #909090;
-  opacity: 0.7;
-  z-index: 9;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+
+	border: 0px solid #ccc;
 }
-.prof{
-  display: block;
+
+    .flipper{
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, #back {
+	width: 320px;
+	height: 427px;
+}
+
+.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
+  
+  -o-transition: 0.6s;
+	-o-transform-style: preserve-3d;
+
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+.front, #back {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+    position: absolute;
+    display: block;
+    margin-top: -10em;
+    margin-right: auto;
+    margin-left: auto;
+    width: 20rem;
+    height: 25rem;
+    background: #909090;
+    opacity: 0.7;
+    z-index: 9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+#back {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+
+    position: absolute;
+    display: block;
+    margin-top: -10em;
+    margin-right: auto;
+    margin-left: auto;
+    width: 20rem;
+    height: 25rem;
+    background: #909090;
+    opacity: 0.7;
+    z-index: 9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.front-logo {
+display: inline-block;
   position: absolute;
   margin-left: 6.5rem;
   margin-right: auto;
-  margin-top: -7rem;
-  background: #afafaf;
+  margin-top: 0.5rem;
   width: 7em;
   height: 7em;
   border-radius: 100px;
-  z-index: 10;
-}
-.profpic{
-  position: absolute;
-  display: block;
-  margin-top: -7rem;
-  margin-left: 6.5rem;
-  margin-right: auto;
-  z-index: 11;
-  width: 7em;
-  max-height: 7em;
-  border-radius: 100px;
+  opacity: 100%;
 }
 
+.back-title {
+	font-weight: bold;
+	color: #00304a;
+	position: absolute;
+	top: 180px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	text-shadow: 0.1em 0.1em 0.05em #acd7e5;
+	font-family: Courier;
+	font-size: 2em;
+}
 
+#back p {
+	position: absolute;
+	bottom: 40px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	padding: 0 20px;
+  font-family: arial;
+  line-height: 2em;
+}
 label {
     -webkit-perspective: 1000px;
     perspective: 1000px;
@@ -57,48 +136,51 @@ label {
     transform: translate(-50%, -50%);
     cursor: pointer;
 }
+:checked + .flip-container{
+    -webkit-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+-o-transform: rotateY(360deg);
+    transform: rotateY(360deg);
 
-#card {
-    position: relative;
-    height: 100%;
-    width: 100%;
+    -webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
+  
+  -o-transition: 0.6s;
+	-o-transform-style: preserve-3d;
+
+	transition: 0.6s;
+	transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    -webkit-transition: all 600ms;
-    transition: all 600ms;
-    z-index: 20;
+
 }
-
-    #card div {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background: #FFF;
-        text-align: center;
-        line-height: 200px;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        border-radius: 2px;
-    }
-
-    #card .back {
-        background: #222;
-        color: #FFF;
-        -webkit-transform: rotateX(-180deg);
-        transform: rotateX(-180deg);
-      	-webkit-transform: rotateY(180deg);
-	-moz-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-	transform: rotateY(180deg);
-		position: absolute;
-    }
-
-
-input {
-    display: none;
-}
-
-:checked + #card{
-    transform: rotateY(180deg);
+:not(:checked) + .flip-container{
     -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+-o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+
+    -webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
+  
+  -o-transition: 0.6s;
+	-o-transform-style: preserve-3d;
+
+	transition: 0.6s;
+	transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+input{
+    display: none;
 }
