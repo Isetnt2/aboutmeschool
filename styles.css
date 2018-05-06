@@ -1,10 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 body{
 background: rgb(238,174,202);
 background: linear-gradient(256deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
-#about{
+.about{
+  	position: absolute;
   display: block;
-  margin-top: 5em;
+  margin-top: -10em;
   margin-right: auto;
   margin-left: auto;
   width: 20rem;
@@ -17,10 +19,10 @@ background: linear-gradient(256deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 
 }
 .prof{
   display: block;
-  position: relative;
-  margin-left: auto;
+  position: absolute;
+  margin-left: 6.5rem;
   margin-right: auto;
-  margin-top: -24rem;
+  margin-top: -7rem;
   background: #afafaf;
   width: 7em;
   height: 7em;
@@ -28,13 +30,75 @@ background: linear-gradient(256deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 
   z-index: 10;
 }
 .profpic{
+  position: absolute;
   display: block;
   margin-top: -7rem;
-  margin-left: auto;
+  margin-left: 6.5rem;
   margin-right: auto;
   z-index: 11;
-  position: relative;
   width: 7em;
   max-height: 7em;
   border-radius: 100px;
+}
+
+
+label {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: block;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+#card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+    z-index: 20;
+}
+
+    #card div {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: #FFF;
+        text-align: center;
+        line-height: 200px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 2px;
+    }
+
+    #card .back {
+        background: #222;
+        color: #FFF;
+        -webkit-transform: rotateX(-180deg);
+        transform: rotateX(-180deg);
+      	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+		position: absolute;
+    }
+
+
+input {
+    display: none;
+}
+
+:checked + #card{
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
