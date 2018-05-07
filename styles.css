@@ -192,13 +192,15 @@ input{
 @media screen and (max-width: 480px) {
 
 			.flip-container {
-				min-width: 0;
+				min-width: 40%;
 				width: 100%;
 				padding: 4em 2em 2.5em 2em ;
 			}
 }
 		@media screen and (max-width: 1680px) {
-
+      .flip-container{
+        width: 100%;
+      }
 			body, input, select, textarea {
 				font-size: 11pt;
 		}
@@ -210,3 +212,15 @@ input{
 		}
 
 	}
+	@media (max-width: 850px) {
+  body:after {
+    column-count: 1;
+  }
+}
+
+
+@media (max-width: 550px) {
+  body {
+    width: 95%;
+  }
+}
