@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
 body{
     overflow: hidden;
@@ -21,8 +22,10 @@ body{
 	}
 
 .flip-container, .front, #back {
-	width: 320px;
-	height: 427px;
+	max-width: 100%;
+  min-width: 27em;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .flipper {
@@ -87,14 +90,16 @@ body{
 }
 
 .front-logo {
-display: inline-block;
   position: absolute;
-  margin-left: 6.5rem;
-  margin-right: auto;
-  margin-top: 0.5rem;
-  width: 7em;
-  height: 7em;
-  border-radius: 100px;
+    display: block;
+    margin-top: 0px;
+    margin-left: 10em;
+    margin-right: auto;
+    margin-button: 0px;
+    max-height: 7em;
+    max-width: 7em;
+    border-radius: 100%;
+    box-shadow: 0 0 0 0.3em #ffffff;
   opacity: 100%;
 }
 
@@ -106,9 +111,8 @@ display: inline-block;
 	left: 0;
 	right: 0;
 	text-align: center;
-	text-shadow: 0.1em 0.1em 0.05em #acd7e5;
-	font-family: Courier;
-	font-size: 2em;
+	font-family: 'Noto sans';
+	font-size: 1em;
 }
 
 #back p {
@@ -184,3 +188,25 @@ label {
 input{
     display: none;
 }
+
+@media screen and (max-width: 480px) {
+
+			.flip-container {
+				min-width: 0;
+				width: 100%;
+				padding: 4em 2em 2.5em 2em ;
+			}
+}
+		@media screen and (max-width: 1680px) {
+
+			body, input, select, textarea {
+				font-size: 11pt;
+		}
+	}
+@media screen and (max-width: 480px) {
+
+		html, body {
+			min-width: 320px;
+		}
+
+	}
