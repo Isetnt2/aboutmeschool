@@ -6,6 +6,10 @@ body{
     background: rgb(238,174,202);
     background: linear-gradient(256deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
+a {
+  text-decoration: none;
+  color: blue;
+}
 .flip-container {
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
@@ -121,15 +125,53 @@ body{
 	bottom: 40px;
 	left: 0;
 	right: 0;
-	top: 0.3em;
+	top: 3em;
 	text-align: left;
 	padding: 0 20px;
   font-family: arial;
   line-height: 1.5em;
   font-family: 'Ubuntu', sans-serif;
 }
-#back b {
+#back bold {
   font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+}
+
+#back name{
+  position: absolute;
+	top: 0.3em;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0 20px;
+	text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: -1em;
+  font-family: 'Ubuntu', sans-serif;
+}
+/*#back a:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='black' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-position: 0 23px;
+    margin-right: auto;
+    margin-left: auto;
+    background-size: auto 4px;
+    background-repeat: repeat-x;
+    padding-bottom: 3px;
+    text-decoration: none;
+    width: 150px;
+}*/
+url:hover {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='black' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-position: 0 23px;
+    margin-right: auto;
+    margin-left: auto;
+    background-size: auto 4px;
+    background-repeat: repeat-x;
+    padding-bottom: 3px;
+    text-decoration: none;
+    width: 150px;
 }
 label {
     -webkit-perspective: 1000px;
