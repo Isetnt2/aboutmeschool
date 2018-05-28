@@ -106,10 +106,6 @@ a {
     border-radius: 100%;
     box-shadow: 0 0 0 0.3em #ffffff;
   opacity: 100%;
--moz-user-select: none;
--webkit-user-select: none; 
--ms-user-select:none; user-select:none;
--o-user-select:none;
 
 }
 
@@ -136,19 +132,11 @@ a {
   font-family: arial;
   line-height: 1.5em;
   font-family: 'Ubuntu', sans-serif;
--moz-user-select: none;
--webkit-user-select: none; 
--ms-user-select:none; user-select:none;
--o-user-select:none;
 }
 #back bold {
   font-size: 16px;
   font-weight: bold;
   text-align: left;
--moz-user-select: none;
--webkit-user-select: none; 
--ms-user-select:none; user-select:none;
--o-user-select:none;
 
 }
 
@@ -164,10 +152,6 @@ a {
   font-size: 20px;
   line-height: -1em;
   font-family: 'Ubuntu', sans-serif;
--moz-user-select: none;
--webkit-user-select: none; 
--ms-user-select:none; user-select:none;
--o-user-select:none;
 
 }
 /*#back a:hover {
@@ -290,4 +274,13 @@ input{
   body {
     width: 95%;
   }
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
