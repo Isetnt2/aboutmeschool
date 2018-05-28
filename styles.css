@@ -6,6 +6,16 @@ body{
     background: rgb(238,174,202);
     background: linear-gradient(256deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
+body, div
+{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
 a {
   text-decoration: none;
   color: blue;
